@@ -1,0 +1,247 @@
+/* le div du jeu entier*/
+.snakeRealm h1 {
+    text-align: center;
+    position: relative;
+}
+
+/*l'écran du jeu */
+.snakeBox {
+    margin: 0 auto;
+    gap: 0;
+    width: 600px;
+    height: 600px;
+    border-radius: 5px 5px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: 2px solid rgb(0, 0, 255);
+    background-color: green;
+}
+
+.snakeBox p {
+    text-align: center;
+    transition: background-color 0.3s;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* menu d'accueil */
+.tutorialBox {
+    z-index: 1;
+    color: rgb(171, 165, 228);
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(23, 34, 63);
+}
+
+.tutorialBox p {
+    font-family: fantasy;
+    font-size: 2rem;
+    margin: 5%;
+}
+
+.tutorialBox button {
+    position: absolute;
+    bottom: 33%;
+    right: 33%;
+    width: 200px;
+    height: 80px;
+    border: 2px solid rgb(0, 0, 255);
+    font-family: fantasy;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    background-color: rgb(82, 82, 219);
+    color: rgb(171, 165, 228);
+    
+}
+
+.tutorialBox button:hover {
+    border: 2px solid rgb(0, 0, 255);
+    background-color: rgb(171, 165, 228);
+    color: rgb(82, 82, 219);
+}
+
+.optionsQuickDisplay {
+    font-size: 1rem;
+    animation: 1s linear infinite condemned_blink_effect;
+}
+
+
+/*écran du bas */
+.scoreBox {
+    background-color: rgb(23, 34, 63);
+    border: 2px solid rgb(0, 0, 255);
+    border-radius: 0px 0px 5px 5px;
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.scoreBox p {
+    flex: 1;
+    font-family: fantasy;
+    margin-top: 40px;
+    margin-left: 25px;
+    font-size: 1.2rem;
+    color: rgb(171, 165, 228);
+}
+
+.scoreBox label {
+    flex: 1;
+    font-family: fantasy;
+    /*width: 200px;*/
+    margin-top: 40px;
+    margin-left: 25px;
+    font-size: 1.2rem;
+    color: rgb(171, 165, 228);
+}
+
+/* boutons musique */
+.tutorialBox .audioPlayer {
+    background-color: rgb(82, 82, 219);
+    background-image: url(images/audioOff.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 3%;
+    right: 0%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 255);
+    font-family: fantasy;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    
+    color: rgb(171, 165, 228);
+}
+
+.audioPlayer:hover {
+    border: 2px solid rgb(0, 0, 255);
+    background-color: rgb(171, 165, 228);
+    color: rgb(82, 82, 219);
+}
+
+.audioPlayer2 {
+    background-color: rgb(82, 82, 219);
+    background-image: url(images/audioOff.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*position: relative;
+    bottom: -50px;
+    right: -321px;*/
+    margin-top: 25px;
+    /*margin-left: 230px;*/
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 255);
+    font-family: fantasy;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    color: rgb(171, 165, 228);
+}
+
+.audioPlayer2:hover {
+    border: 2px solid rgb(0, 0, 255);
+    background-color: rgb(171, 165, 228);
+    color: rgb(82, 82, 219);
+}
+
+/* gameover Menu */
+.deathBox {
+    z-index: 1;
+    color: rgb(171, 165, 228);
+    position: absolute;
+    width: 200px;
+    margin-top: 200px;
+    margin-left: 200px;
+    border: 2px solid rgb(0, 0, 255);
+    height: 300px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(23, 34, 63);
+}
+
+.deathBox p {
+    font-family: fantasy;
+    font-size: 2rem;
+    margin: 5%;
+}
+
+.deathBox button {
+    margin-left: 20px;
+    width: fit-content;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 255);
+    font-family: fantasy;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: rgb(82, 82, 219);
+    color: rgb(171, 165, 228);
+}
+
+.deathBox button:hover {
+    border: 2px solid rgb(0, 0, 255);
+    background-color: rgb(171, 165, 228);
+    color: rgb(82, 82, 219);
+}
+
+/* mode pause*/
+#pausePara {
+    position: absolute ;
+    margin-top: 300px;
+    margin-left: 225px;
+    text-align: center;
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    font-family: fantasy;
+    font-size: 4rem;
+    border: 2px solid rgb(0, 0, 255);
+    background-color: rgb(171, 165, 228);
+    color: rgb(82, 82, 219);
+    animation: 2s linear infinite condemned_blink_effect;
+}
+
+@keyframes condemned_blink_effect {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+}
+
+/* tableau des scores */
+.rankingTable {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr );
+    grid-template-rows: repeat( 6, 1fr );
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.rankingTable p, .rankingTable h3 {
+    margin: 0;
+    padding: 0;
+    font-size: initial;
+    font-family: initial;
+    overflow: hidden;
+}
+
+.tutorialBox .register {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: initial;
+    width: 100px;
+    height: 30px;
+}
